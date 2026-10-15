@@ -46,7 +46,7 @@ jobs:
       - name: Probe MME, DirectSound and WASAPI
         shell: pwsh
         run: |
-          python probe/loopback_probe.py --src s2s/src --out "CABLE Input" --in "CABLE Output" `
+          python probe/loopback_probe.py --src s2s/src --out "VB-Audio Virtual Cabl" --in "CABLE Output" `
             --hostapi MME --hostapi DirectSound --hostapi WASAPI 2>&1 | Tee-Object -FilePath probe-results.jsonl
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
